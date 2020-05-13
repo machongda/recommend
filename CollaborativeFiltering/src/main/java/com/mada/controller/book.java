@@ -46,7 +46,7 @@ public class book {
              int start;
             while(true){
                 d = Math.random();
-                start=(int)d*20;
+                start=(int)(d*20);
                 if(start*100<=count-100)
                     break;
             }

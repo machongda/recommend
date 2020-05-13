@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d592d615-39b0-4db4-aa7f-b7bae38b6580" name="Default Changelist" comment="" />
+    <list default="true" id="d592d615-39b0-4db4-aa7f-b7bae38b6580" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborativeFiltering/src/main/java/com/mada/controller/book.java" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborativeFiltering/src/main/java/com/mada/controller/book.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,9 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CollaborativeFiltering" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,6 +40,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -57,12 +66,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1aCmmHu59tJrgGfW1e3Ltyt6KeI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowTODO.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSP" />
@@ -257,7 +268,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -281,7 +292,8 @@
       <workItem from="1586254148774" duration="5904000" />
       <workItem from="1587521673121" duration="17684000" />
       <workItem from="1588921558522" duration="7131000" />
-      <workItem from="1588931655669" duration="74792000" />
+      <workItem from="1588931655669" duration="75587000" />
+      <workItem from="1589354340337" duration="1609000" />
     </task>
     <servers />
   </component>
@@ -325,38 +337,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="634" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586255124313" />
-    <state width="1531" height="426" key="GridCell.Tab.0.bottom" timestamp="1589353547859">
+    <state width="1877" height="320" key="GridCell.Tab.0.bottom" timestamp="1589356583932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.0.center" timestamp="1589353547858">
+    <state width="1877" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583932" />
+    <state width="1877" height="320" key="GridCell.Tab.0.center" timestamp="1589356583931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547858" />
-    <state width="1531" height="426" key="GridCell.Tab.0.left" timestamp="1589353547858">
+    <state width="1877" height="320" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583931" />
+    <state width="1877" height="320" key="GridCell.Tab.0.left" timestamp="1589356583931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547858" />
-    <state width="1531" height="426" key="GridCell.Tab.0.right" timestamp="1589353547859">
+    <state width="1877" height="320" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583931" />
+    <state width="1877" height="320" key="GridCell.Tab.0.right" timestamp="1589356583932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.1.bottom" timestamp="1589353547859">
+    <state width="1877" height="320" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583932" />
+    <state width="1531" height="412" key="GridCell.Tab.1.bottom" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.1.center" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.1.center" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.1.left" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.1.left" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.1.right" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.1.right" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
+    <state width="1531" height="412" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
     <state width="1293" height="735" key="GridCell.Tab.10.bottom" timestamp="1586253901810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -405,22 +417,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="483" key="GridCell.Tab.15.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587538617244" />
-    <state width="1531" height="426" key="GridCell.Tab.2.bottom" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.2.bottom" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.2.center" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.2.center" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.2.left" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.2.left" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
-    <state width="1531" height="426" key="GridCell.Tab.2.right" timestamp="1589353547859">
+    <state width="1531" height="412" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
+    <state width="1531" height="412" key="GridCell.Tab.2.right" timestamp="1589356583924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1531" height="426" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589353547859" />
+    <state width="1531" height="412" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589356583924" />
     <state width="1293" height="735" key="GridCell.Tab.9.bottom" timestamp="1586253859177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,8 +493,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/CollaborativeFiltering/src/main/java/com/mada/controller/book.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="9" />
+          <line>47</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

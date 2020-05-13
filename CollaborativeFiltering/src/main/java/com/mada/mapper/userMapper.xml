@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mada.mapper.userMapper">
+    <insert id="addUser" parameterType="user" >
+	        insert into user
+		( u_id, image_path, sex,nickname, birth, password, lebels )
+		values
+		(#{uId},#{imagePath},#{sex},#{nickname},#{birth},#{password},#{lebels})
+		 </insert>
+
+
+	<insert id="addReadingRecord"  >
+	        insert into reading_record
+		( u_id, b_id, score )
+		values
+		(#{uId},#{bId},#{score})
+		 </insert>
+    <select id="getUserList" resultType="user">
+    select * from   user
+	</select>
+	<select id="getUser" resultType="user" resultMap="userMap">
+		SELECT * FROM user where u_id=#{uId}
+	</select>
+
+	<select id="getReadingRecordList" resultType="readingRecord">
+		SELECT * FROM reading_record where u_id=#{uId}
+	</select>
+<update id="updateUserLebels"  >
+	update user set lebels=#{lebels} where u_id=#{uId}
+</update>
+
+
+	<select id="getReadingBookList" resultType="book">
+   select * from   book where b_id in (select b_id from reading_record where u_id=#{uId});
+</select>
+
+	<resultMap type="com.mada.pojo.user" id="userMap">
+		<id property="uId" column="u_id" />
+		<result property="imagePath" column="image_path" />
+		<result property="nickname" column="nickname" />
+		<result property="sex" column="sex" />
+		<result property="birth" column="birth" />
+		<result property="lebels" column="lebels" />
+		<!-- 一对多级联查询，ofType表示集合中的元素类型，将uid传递给selectOrdersByld -->
+		<collection property="readingRecordList" ofType="com.mada.pojo.readingRecord"
+					column="u_id" select="getReadingRecordList" />
+	</resultMap>
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
+

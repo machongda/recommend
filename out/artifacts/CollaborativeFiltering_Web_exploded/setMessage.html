@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>推送消息设置</title>
+</head>
+<style type="text/css">
+textarea {
+    width: 80%;
+}
+
+.center {
+
+    width: 1600px;
+    margin: 0 auto;
+
+}
+</style>
+<script type="text/javascript">
+function check() {
+
+     var form = document.querySelector("form");
+    var name = form.querySelector("input[name='name']").value;
+    var password = form.querySelector("input[name='password']").value;
+    var message = form.querySelector("textarea[name='message']").value;
+     if (message.trim() == "") {
+        alert("请输入消息！");
+        return false;
+    }
+    if (name.trim() == "") {
+        alert("请输入用户名！");
+        return false;
+
+    }
+    if (password.trim() == "") {
+        alert("请输入密码！");
+        return false;
+    }
+   
+
+    console.log(name.value);
+
+    console.log(password.value);
+    console.log(message.value);
+   return true;
+}
+</script>
+<body>
+    <div class=center>
+        <form method="post" action="./user/setMessage" onsubmit=" return check()">
+            <p>消息内容</p>
+            <textarea name="message" rows="6" cols="20" placeholder="设置推送消息，最多可以150个文字" maxlength="-1"></textarea><br>
+            <input name="name" type="text" maxlength="150" placeholder="name" /><br>
+            <input name="password" type="password" maxlength="150" placeholder="password" /><br>
+            <p>
+                <input type="submit" name="Button" value="提交" /> <input type="reset" name="Reset" value="重填" />
+            </p>
+        </form>
+    </div>
+</body>
+
+
+</html>

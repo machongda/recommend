@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mada.mapper.bookMapper">
+    <insert id="addBook" parameterType="book">
+	        insert into book (b_id,isbn,name,cover_path,author,publishing_house,publishing_year,labels,brief_introduction ,score,point_number)
+	        values (#{bId},#{isbn},#{name},#{coverPath},#{authorName},#{publishingHouse},#{publishingYear},#{labels},#{briefIntroduction},#{score},#{pointNumber})
+	 </insert>
+    <select id="getBookList" resultType="book">
+    select * from   book
+	</select>
+
+    <select id="searchBook" resultType="book">
+    select * from   book where name like CONCAT('%',#{search},'%') or author_name like CONCAT('%',#{search},'%') order by point_number desc limit 0,50;
+	</select>
+    <select id="getBook" resultType="book">
+		SELECT * FROM book where b_id=#{bId}
+	</select>
+    <select id="getRecommendBook" resultType="book"  >
+        select * from book where
+        <if test="array!=null and array.length!=0">
+            (
+        </if>
+        <foreach collection="array" index="index" item="item" open="" separator="or" close="">labels like
+            CONCAT('%',#{item},'%')
+        </foreach>
+        <if test="array!=null and array.length!=0">
+            )
+        </if >
+		<if test="array!=null and array.length!=0">
+			and
+		</if >
+      	  point_number>10000 and score>7.5
+        order by score desc
+        limit #{start},100;
+    </select>
+
+    <select id="getRecommendBookCount" resultType="Integer">
+        select count(*) from book where
+        <if test="array!=null and array.length!=0">
+            (
+        </if>
+        <foreach collection="array" index="index" item="item" open="" separator="or" close="">labels like
+            CONCAT('%',#{item},'%')
+        </foreach>
+        <if test="array!=null and array.length!=0">
+            )
+        </if >
+        <if test="array!=null and array.length!=0">
+            and
+        </if >
+        point_number>10000 and score>7.5;
+    </select>
+    <select id="getComment" resultType="comment">
+		SELECT * FROM comment where b_id=#{bId}
+	</select>
+
+
+
+
+
+</mapper>
+

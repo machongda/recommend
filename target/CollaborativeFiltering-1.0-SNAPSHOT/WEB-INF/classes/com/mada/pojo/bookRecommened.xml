@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="beans">
+    <insert id="addBook" parameterType="book">
+	        insert into book (b_id,isbn,name,cover_path,author,publishing_house,publishing_year,labels,brief_introduction ,score,point_number)
+	        values (#{bId},#{isbn},#{name},#{coverPath},#{authorName},#{publishingHouse},#{publishingYear},#{labels},#{briefIntroduction},#{score},#{pointNumber})
+	 </insert>
+    <select id="getBookList" resultType="book">
+    select * from   book
+	</select>
+	<select id="getBookIdList" resultType="String">
+		SELECT concat('https://book.douban.com/subject/',b_id,'/') FROM book
+	</select>
+
+	<insert id="addAuthor" parameterType="author">
+	        insert into author (a_id,name,sex,birth,area,a_image_path,about_author)
+	        values (#{aId},#{name},#{sex},#{birth},#{area},#{aImagePath},#{aboutAuthor})
+	 </insert>
+	<select id="getAuthorList" resultType="author">
+    select * from   author
+	</select>
+
+	<insert id="addCommentList" parameterType="java.util.List">
+		insert into comment
+		(
+		b_id,
+		nickname,
+		content
+		)
+		values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{item.bId},
+			#{item.nickname},
+			#{item.content}
+			)
+		</foreach>
+
+	</insert>
+<!--	<insert id="addComment" parameterType="comment">-->
+<!--		insert into comment-->
+<!--		(-->
+<!--		b_id,-->
+<!--		nickname,-->
+<!--		content,-->
+<!--		)-->
+<!--		values-->
+<!--		(#{bId},#{nickname},#{content})-->
+<!--	</insert>-->
+	<select id="getCommentList" parameterType="_int" resultType="comment">
+		select * from   comment where b_id=#{id}
+	</select>
+
+
+	<insert id="addReadingRecordList" parameterType="java.util.List">
+		insert into reading_record
+		(
+		b_id,
+		u_id
+		)
+		values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{item.bId},
+			#{item.uId}
+			)
+		</foreach>
+	</insert>
+	<select id="getReadingRecordList"  resultType="readingRecord">
+		select * from   reading_record
+	</select>
+
+	<select id="getBookUrlList"  resultType="java.lang.String">
+		select * from   book_url
+	</select>
+
+
+
+	<insert id="insertBookUrlList" parameterType="java.util.List">
+		insert into book_url  (book_url) values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{item}
+
+			)
+		</foreach>
+	</insert>
+
+	<select id="getRecommendBookUrlList"  resultType="java.lang.String">
+		select recommend_book_url from   recommend_book_url
+	</select>
+
+
+
+	<insert id="insertRecommendBookUrlList" parameterType="java.util.List">
+		insert into recommend_book_url  (recommend_book_url) values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{item}
+
+			)
+		</foreach>
+	</insert>
+
+	<select id="getVisitedBookUrlList"  resultType="java.lang.String">
+		SELECT concat('https://book.douban.com/subject/',b_id,'/') FROM book
+	</select>
+
+	<select id="getVisitedAuthorUrlList"  resultType="java.lang.String">
+		SELECT concat('https://book.douban.com/author/',a_id,'/') FROM author
+	</select>
+
+
+	<insert id="insertTopList"  parameterType="java.util.Map">
+		insert into top_list  (name,b_id) values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{topName},
+			#{item}
+
+			)
+		</foreach>
+	</insert>
+
+	<select id="getTopList" parameterType="java.lang.String" resultType="java.lang.String">
+		SELECT concat('https://book.douban.com/author/',b_id,'/') FROM top_list whrer name=#{0}
+	</select>
+
+
+
+	<insert id="insertUserUrlList" parameterType="java.util.List">
+		insert into user_url  (user_url) values
+		<foreach collection="list" item="item" index= "index" separator =",">
+			(
+			#{item}
+
+			)
+		</foreach>
+	</insert>
+
+	<select id="getUserUrlList"  resultType="java.lang.String">
+		select user_url from   user_url
+	</select>
+
+	<select id="getVisitedUserUrlList"  resultType="java.lang.String">
+		SELECT concat('https://www.douban.com/people/',u_id,'/') FROM user
+	</select>
+
+
+	<select id="getNotScoreUrlList"  resultType="java.lang.String">
+		SELECT concat('https://www.douban.com/people/',u_id,'/') FROM user where score is null
+	</select>
+
+
+	<update id="updateScore" parameterType="java.util.Map">
+		update Member
+		<set>
+			score=#{score},
+			point_number=#{pointNumber}
+		</set>
+		where b_id=#{bId}
+	</update>
+    <!--    <delete id="deleteCategory" parameterType="Category" >-->
+    <!--	        delete from category_ where id= #{id}   -->
+    <!--	    </delete>-->
+
+    <!--    <select id="getCategory" parameterType="_int" resultType="Category">-->
+    <!--	        select * from   category_  where id= #{id}    -->
+    <!--	    </select>-->
+
+    <!--    <update id="updateCategory" parameterType="Category" >-->
+    <!--	        update category_ set name=#{name} where id=#{id}    -->
+    <!--	    </update>-->
+    <!--    <select id="listCategory" resultType="Category">-->
+    <!--	        select * from   category_      -->
+    <!--	    </select>-->
+</mapper>
+
